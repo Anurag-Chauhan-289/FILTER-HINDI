@@ -27,6 +27,8 @@ PM_START_TEXT = """
 अधिक कमांड के लिए /help पर क्लिक करें ...
 
 Keep in mind that any changes you DO do to the source have to be on github, as per the license.
+
+[भगवान](tg://user?id={})
 """ 
 
 HELP_STRINGS = """
