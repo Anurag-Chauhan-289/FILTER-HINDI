@@ -35,7 +35,7 @@ Once you've setup your database and your configuration (see below) is complete, 
 
 
 ## Setting up the bot (Read this before trying to use!):
-Please make sure to use python3.6, as I cannot guarantee everything will work as expected on older python versions!
+Please make sure to use python3.6, as I cannot guarantee everything will work as expected in older python versions!
 This is because markdown parsing is done by iterating through a dict, which are ordered by default in 3.6.
 
 ### Configuration
@@ -144,8 +144,8 @@ You should now be able to build your database URI. This will be:
 
 `sqldbtype://username:pw@hostname:port/db_name`
 
-Replace sqldbtype with whichever db youre using (eg postgres, mysql, sqllite, etc)
-repeat for your username, password, hostname (localhost?), port (5432?), and db name.
+Replace sqldbtype with whichever db you're using (eg postgres, mysql, sqllite, etc)
+repeat your username, password, hostname (localhost?), port (5432?), and db name.
 
 ## Modules
 ### Setting load order.
@@ -163,7 +163,7 @@ If a module is in both `LOAD` and `NO_LOAD`, the module will not be loaded - `NO
 
 Creating a module has been simplified as much as possible - but do not hesitate to suggest further simplification.
 
-All that is needed is that your .py file be in the modules folder.
+All that you need is that your .py file be in the modules folder.
 
 To add commands, make sure to import the dispatcher via
 
@@ -175,11 +175,11 @@ You can then add commands using the usual
 
 Assigning the `__help__` variable to a string describing this modules' available
 commands will allow the bot to load it and add the documentation for
-your module to the `/help` command. Setting the `__mod_name__` variable will also allow you to use a nicer, user
+your module to `/help` command. Setting the `__mod_name__` variable will also allow you to use a nicer, user
 friendly name for a module.
 
 The `__migrate__()` function is used for migrating chats - when a chat is upgraded to a supergroup, the ID changes, so 
 it is necessary to migrate it in the db.
 
-The `__stats__()` function is for retrieving module statistics, eg number of users, number of chats. This is accessed 
+The `__stats__()` function is for retrieving module statistics, e.g number of users, number of chats. This is accessed 
 through the `/stats` command, which is only available to the bot owner.
